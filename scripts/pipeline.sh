@@ -12,3 +12,6 @@ do
     database="databases/clinvar_${date}.db"
     touch "$database"
 done 
+
+#Include ClinVar variant data in the database
+python scripts/b_program.py $file
