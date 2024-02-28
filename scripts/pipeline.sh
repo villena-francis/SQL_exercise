@@ -17,3 +17,6 @@ done
 #EXERCISE A
 var_citations="data/var_citations.txt"
 python scripts/clinvar_a_parser.py $clinvar_db $var_citations
+
+#EXERCISE B
+python scripts/clinvar_b_parser.py $clinvar_db $variant_summary
