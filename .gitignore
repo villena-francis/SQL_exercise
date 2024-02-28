@@ -1,5 +1,5 @@
 #Ignore dir content in..
-databases/*
+database/*
 data/*
 #except .gitkeep files
 !databases/.gitkeep

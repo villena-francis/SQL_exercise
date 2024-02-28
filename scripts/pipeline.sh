@@ -13,3 +13,7 @@ do
     clinvar_db="database/clinvar_${date}.db"
     touch "$clinvar_db"
 done
+
+#EXERCISE A
+var_citations="data/var_citations.txt"
+python scripts/clinvar_a_parser.py $clinvar_db $var_citations
