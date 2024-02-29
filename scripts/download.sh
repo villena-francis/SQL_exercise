@@ -10,4 +10,4 @@ data_file="$2/$(basename $1)"
 md5sum "$data_file" > "$data_file.md5"
 
 #Check md5
-md5sum -c "$download_file.md5"
+md5sum -c "$data_file.md5"

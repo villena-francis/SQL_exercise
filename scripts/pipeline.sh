@@ -5,9 +5,9 @@ do
 done
 
 #Create ClinVar database file 
-mkdir database
-
-for variant_summary in data/variant_summary_*
+mkdir -p database
+shopt -s extglob
+for variant_summary in data/variant_summary_!(*.md5)
 do
     date=$(echo $variant_summary | grep -oP 'variant_summary_\K\d{4}-\d{2}' | sed 's/-/_/g')
     clinvar_db="database/clinvar_${date}.db"
@@ -22,7 +22,7 @@ python scripts/clinvar_a_parser.py $clinvar_db $var_citations
 python scripts/clinvar_b_parser.py $clinvar_db $variant_summary
 
 #Create CIViC database file
-for VariantSummaries in data/*VariantSummaries*
+for VariantSummaries in data/*VariantSummaries!(*.md5)
 do
     date=$(echo $VariantSummaries | grep -oP '\d{2}-[A-Za-z]{3}-\d{4}' | sed 's/-/_/g')
     civic_db="database/civic_${date}.db"
