@@ -33,3 +33,8 @@ done
 EvidenceSummaries="data/*EvidenceSummaries*"
 python scripts/civic_c1_parser.py $civic_db $EvidenceSummaries
 python scripts/civic_c2_parser.py $civic_db $VariantSummaries
+
+#QUESTIONS
+export clinvar_db
+export civic_db
+bash scripts/questions.sh

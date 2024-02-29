@@ -1,6 +1,6 @@
 #Ignore dir content in..
 database/*
 data/*
+questions/*
 #except .gitkeep files
-!databases/.gitkeep
 !data/url
