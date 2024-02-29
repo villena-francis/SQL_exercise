@@ -32,3 +32,4 @@ done
 #EXERCISE C
 EvidenceSummaries="data/*EvidenceSummaries*"
 python scripts/civic_c1_parser.py $civic_db $EvidenceSummaries
+python scripts/civic_c2_parser.py $civic_db $VariantSummaries
