@@ -12,11 +12,11 @@ echo "as a reference in ClinVar and in CIViC?"
 echo " "
 
 clinvar1=$(sqlite3 $clinvar_db << EOF 
-"SELECT COUNT(*)
+SELECT COUNT(*)
 FROM variants
 WHERE gene_symbol
 LIKE '%TP53%'
-  AND reference_assembly = 'GRCh38';"
+  AND reference_assembly = 'GRCh38';
 EOF
 )
 
@@ -29,7 +29,7 @@ civic1=$(sqlite3 $civic_db << EOF
 FROM variants
 WHERE gene_symbol
 LIKE '%TP53%'
-  AND reference_assembly = 'GRCh38';"
+  AND reference_assembly = 'GRCh38';
 EOF
 )
 
