@@ -11,3 +11,6 @@ md5sum "$data_file" > "$data_file.md5"
 
 #Check md5
 md5sum -c "$data_file.md5"
+
+echo " "
+echo " "

@@ -6,6 +6,9 @@ echo "Databases utilized to solve the questions:"
 echo "$clinvar_db"
 echo "$civic_db"
 
+echo " "
+echo " "
+
 echo "1. How many variants are related to the P53 gene using the GRCh38 assembly"
 echo "as a reference in ClinVar and in CIViC?"
 
@@ -33,7 +36,11 @@ LIKE '%TP53%'
 EOF
 )
 
-echo "CIViC: $civic1"
+if [ -z "$civic1" ]; then
+    echo "CIViC: No results found for your search criteria"
+else
+    echo "CIViC: $civic1"
+fi
 
 echo " "
 echo " "
@@ -144,10 +151,10 @@ LIMIT 1;
 EOF
 )
 
-if [ -z "$output" ]; then
+if [ -z "$civic5" ]; then
     echo "No results found for your search criteria"
 else
-    echo "$output"
+    echo "$civic5"
 fi
 
 echo " "
