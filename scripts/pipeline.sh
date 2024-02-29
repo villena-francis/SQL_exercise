@@ -20,3 +20,11 @@ python scripts/clinvar_a_parser.py $clinvar_db $var_citations
 
 #EXERCISE B
 python scripts/clinvar_b_parser.py $clinvar_db $variant_summary
+
+#Create CIViC database file
+for VariantSummaries in data/*VariantSummaries*
+do
+    date=$(echo $VariantSummaries | grep -oP '\d{2}-[A-Za-z]{3}-\d{4}' | sed 's/-/_/g')
+    civic_db="database/civic_${date}.db"
+    touch "$civic_db"
+done
