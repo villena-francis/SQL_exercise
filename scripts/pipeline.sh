@@ -28,3 +28,7 @@ do
     civic_db="database/civic_${date}.db"
     touch "$civic_db"
 done
+
+#EXERCISE C
+EvidenceSummaries="data/*EvidenceSummaries*"
+python scripts/civic_c1_parser.py $civic_db $EvidenceSummaries
