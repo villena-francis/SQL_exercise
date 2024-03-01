@@ -101,15 +101,43 @@ echo "provide the total numbers."
 
 echo " "
 
-echo "ClinVar:"
+echo "For insertions:"
 sqlite3 $clinvar_db << EOF
 .mode markdown 
 SELECT gene_symbol, 
 COUNT(*) AS total 
 FROM variants 
-WHERE (variant_type = 'Insertion' 
-  OR variant_type = 'Deletion' 
-  OR variant_type = 'Indel') 
+WHERE variant_type = 'Insertion' 
+  AND reference_assembly = 'GRCh37' 
+GROUP BY gene_symbol 
+ORDER BY total DESC 
+LIMIT 3;
+EOF
+
+echo " "
+
+echo "For deletions:"
+sqlite3 $clinvar_db << EOF
+.mode markdown 
+SELECT gene_symbol, 
+COUNT(*) AS total 
+FROM variants 
+WHERE variant_type = 'Deletion' 
+  AND reference_assembly = 'GRCh37' 
+GROUP BY gene_symbol 
+ORDER BY total DESC 
+LIMIT 3;
+EOF
+
+echo " "
+
+echo "For indels:"
+sqlite3 $clinvar_db << EOF
+.mode markdown 
+SELECT gene_symbol, 
+COUNT(*) AS total 
+FROM variants 
+WHERE variant_type = 'Indel' 
   AND reference_assembly = 'GRCh37' 
 GROUP BY gene_symbol 
 ORDER BY total DESC 
