@@ -7,6 +7,10 @@ echo "$clinvar_db"
 echo "$civic_db"
 
 echo " "
+
+echo "Resolution date: $(date '+%Y-%m-%d %H:%M:%S')"
+
+echo " "
 echo " "
 
 echo "1. How many variants are related to the P53 gene using the GRCh38 assembly"
