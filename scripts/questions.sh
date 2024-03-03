@@ -275,8 +275,7 @@ SELECT COUNT(*) AS number_of_variants
 FROM variants 
 WHERE reference_assembly = 'GRCh37' 
   AND chromosome = '13'
-  AND chr_start >= 10000000 
-  AND chr_start <= 20000000;
+  AND chr_start BETWEEN 10000000 AND 20000000;
 EOF
 
 echo " "
@@ -288,8 +287,7 @@ SELECT COUNT(*) AS number_of_variants
 FROM variants 
 WHERE reference_assembly = 'GRCh37' 
   AND chromosome = '13'
-  AND chr_start >= 10000000 
-  AND chr_start <= 20000000;
+  AND chr_start BETWEEN 10000000 AND 20000000;
 EOF
 
 echo " "
