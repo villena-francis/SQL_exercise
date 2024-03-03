@@ -143,7 +143,7 @@ bash scripts/pipeline.sh
 
 **The script automates the following tasks:**
 
-1. Call the `download.sh` script which retrieves the [selected files from ClinVar and CIViC](#exploration-and-initial-analysis-of-datasets) using their URLs (`dada/url`) and generates their md5.
+1. Call the `download.sh` script which retrieves the [selected files from ClinVar and CIViC](#exploration-and-initial-analysis-of-datasets) using their URLs (`data/url`) and generates their md5.
 
 2. Generate the databases to which data from the downloaded ClinVar and CIViC files will be dumped. The names of these databases automatically include the date of the file versions used, in this case: `clinvar_2023_12.db` and `civic_01_Dec_2023.db`, stored in `/database`.
 
