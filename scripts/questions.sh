@@ -62,16 +62,14 @@ sqlite3 $clinvar_db << EOF
 SELECT 'G>A' AS change,
 COUNT(*) AS freq
 FROM variants
-WHERE variant_type = 'single nucleotide variant'
-  AND reference_assembly = 'GRCh37'
+WHERE reference_assembly = 'GRCh37'
   AND reference_allele = 'G'
   AND alternative_allele = 'A'
 UNION ALL
 SELECT 'G>T' AS change,
 COUNT(*) AS freq 
 FROM variants 
-WHERE variant_type = 'single nucleotide variant'
-  AND reference_assembly = 'GRCh37'
+WHERE reference_assembly = 'GRCh37'
   AND reference_allele = 'G'
   AND alternative_allele = 'T';
 EOF
