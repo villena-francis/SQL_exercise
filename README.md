@@ -133,7 +133,7 @@ The complete queries to answer all the questions are stored in `scripts/question
 
 # THE PIPELINE TO SOLVE ALL ASSIGMENTS
 
-The pipeline.sh was developed to automate the assignments for PART 1 and PART 2 (check them [here](#assigments)). To activate it, set the SQL_exercise folder from this repo as the working directory using the following command:
+The pipeline.sh was developed to automate the assignments for PART 1 and PART 2 (check them [here](#assigments)). To activate it, set the `SQL_exercise-main` folder from this repo as the working directory and use the following command:
 
 ``` sh
 bash scripts/pipeline.sh
