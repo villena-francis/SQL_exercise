@@ -2,7 +2,7 @@
 
 # Purpose
 
-This repository serves as a submission for the ***final project of the Programming and Management of SQL Databases course***, overseen by [@jmfernandez](jmfernandez) and [@eandresleon](https://github.com/eandresleon), within the Bioinformatics Master's program at ENS-ISCIII. 
+This repository serves as a submission for the ***final project of the Programming and Management of SQL Databases course***, overseen by [@jmfernandez](https://github.com/jmfernandez) and [@eandresleon](https://github.com/eandresleon), within the Bioinformatics Master's program at ENS-ISCIII. 
 
 The original assignment prompt can be accessed through this [link](https://drive.google.com/file/d/1-Sh3ucoHaoUjv3kEpWo5S-7XR5I_A66t/view).
 
