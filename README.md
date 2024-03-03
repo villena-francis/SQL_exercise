@@ -79,6 +79,7 @@ The attributes chosen for the ClinVar queries were used as a reference to select
 | AlternateAlleleVCF                  | variant_bases                        | alternative_allele    |
 | VariationID                         | vatiant_id                           | variant_id            |
 | OriginSimple                        | variant_origin***                    | variant_origin        |
+
 ***___from ClinicalEvidenceSummaries___
 
 # Development of python programs for data importing
